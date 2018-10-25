@@ -1,0 +1,19 @@
+2's compliment
+- dedicated sign bit with 2^n value 
+- 4 bit 2's compliment largest pos number 7
+- to convert to neg number: flip 0's to 1(one's compliment) and add 1
+- y = #, yc = onec comp of y, n bits, n-1 magnitude
+- y + yc = 1111 -> all bits 1 = 2^n-1
+- y + yc = -1 * 2 ^n-1 + 2^n-1 -1
+- y + y = -1
+- -y = y + 1 (one's comp plus 1)
+Adding
+- n bit 2's comp representation
+	-> [-2^n-1, 2^n-1 -1]
+- int has range of prepresentation
+- int can overflow when out of range(add 2 positive num get negative num)
+-
+Signed/Unsigned
+- -1 when interpreted as a unsigned num is 2^n-1 which is huge
+Sign Extension
+- when extending size of num take sign bit and copy into rest of empy bits

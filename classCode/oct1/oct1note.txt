@@ -1,0 +1,8 @@
+// number systems
+// hex uses base 16: 1-9, a, b, c, d,e, f
+// denoted by 0x__ ex) 0x2a = 10*16^0 + 2*16^1 = 42
+// cnvert from decimal to binary:
+// 	find highest power of 2 that fits inside the number
+// 	subtract form the decimal and repeat for result
+// 
+
