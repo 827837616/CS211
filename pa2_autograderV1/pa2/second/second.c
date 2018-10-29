@@ -52,7 +52,7 @@ int main(int argc, char** argv) {
 		}	
 	}
 	if (!uni) {
-		printf("no-solution");
+		printf("multi-solution");
 		return 0;
 	}
 
@@ -120,12 +120,12 @@ bool checkVal(int num, int r, int c, int matrix[9][9]) {
 		if (matrix[r][i] == num) {
 			return false;
 		} 
-		if (matrix[(r / 3) * 3 + (i % 3) ][(c / 3) * 3 + (i % 3) ] == num) {
-			return false;
-		}
+//		if (matrix[(r / 3) * 3 + (i % 3) ][(c / 3) * 3 + (i % 3) ] == num) {
+//			return false;
+//		}
 	}
 	 
-/*	int mr; int mc;
+	int mr; int mc;
 	if (r <= 2) mr = 2;
 	if (r >= 2 && r <= 5) mr = 5;
 	if (r >= 5 && r <= 8) mr = 8;
@@ -138,7 +138,7 @@ bool checkVal(int num, int r, int c, int matrix[9][9]) {
 				return false;
 			}
 		}
-	} */ 
+	} 
 	return true;
 }
 void print(int matrix[9][9]) {

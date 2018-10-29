@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-bool unique(int i, int j, int matrix[9][9]);
+
 void print(int matrix[9][9]);
 bool checkVal(int num, int r, int c, int matrix[9][9]);
 bool solve(int matrix[9][9]);
@@ -39,48 +39,15 @@ int main(int argc, char** argv) {
 			}
 		}
 	}
-	bool uni = false;
-	for (int i = 0; i < 9; i++) {
-		for (int j = 0; j < 9; j++) {
-			if (unique(i, j, sudoku)) {
-				uni = true;
-				break;
-			}
-		}
-		if (uni) {
-			break;
-		}	
-	}
-	if (!uni) {
-		printf("no-solution");
-		return 0;
-	}
-
 //	print(sudoku);
 	bool ans = solve(sudoku);
 	if (!ans) {
 		printf("no-solution\n");
-		return 0;
+//		return 0;
 	}
 	print(sudoku);
 	fclose(fp);
 	return 0;
-}
-bool unique(int i, int j, int matrix[9][9]) {
-	bool cert = false;
-	for (int k = 1; k <= 9; k++) {
-		if (k == 1) {
-			cert = checkVal(k, i, j, matrix);
-		} else if (checkVal(k, i, j, matrix)) {
-			if (cert) {
-				return false;
-			} else {
-				cert = checkVal(k, i, j, matrix);
-			}
-		}
-	}
-	if (cert) return true;
-	else return false;
 }
 bool solve(int matrix[9][9]) {
 	for(int i = 0; i < 9; i++) {
@@ -120,12 +87,12 @@ bool checkVal(int num, int r, int c, int matrix[9][9]) {
 		if (matrix[r][i] == num) {
 			return false;
 		} 
-		if (matrix[(r / 3) * 3 + (i % 3) ][(c / 3) * 3 + (i % 3) ] == num) {
-			return false;
-		}
+//		if (matrix[(r / 3) * 3 + (i % 3) ][(c / 3) * 3 + (i % 3) ] == num) {
+//			return false;
+//		}
 	}
 	 
-/*	int mr; int mc;
+	int mr; int mc;
 	if (r <= 2) mr = 2;
 	if (r >= 2 && r <= 5) mr = 5;
 	if (r >= 5 && r <= 8) mr = 8;
@@ -138,7 +105,7 @@ bool checkVal(int num, int r, int c, int matrix[9][9]) {
 				return false;
 			}
 		}
-	} */ 
+	} 
 	return true;
 }
 void print(int matrix[9][9]) {
