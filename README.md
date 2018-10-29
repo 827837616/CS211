@@ -21,8 +21,7 @@ CS 112 is a pre-requisite for this course.
 Textbooks
 
 Required: R.E.Bryant and D.R.O'Hallaron, Computer Systems: A Programmer's Perspective, Prentice Hall,  Third edition. 
-
-    ​Students can probably also use the second edition of the book.
+Students can probably also use the second edition of the book.
 
 Recommended: D.A.Patterson and J.L.Hennessy, Computer Organization and Design: The Hardware/Software Interface, Morgan Kauffman
 
