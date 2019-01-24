@@ -1,0 +1,8 @@
+Arjun Patel PA4 Report
+	The main data structure I used was a 2d array. The rows represent the sets and the 
+	nodes in each collumn, the blocks. Prefetching takes the adress adjacent to the one
+	being read from memory and inserts it into the cache because it is likely that it 
+	will be used. This increases the number of hits and thus the number of reads. This
+	was observed as in each case, the number of hits and reads increased with 
+	prefetching.
+
